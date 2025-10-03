@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- 404 Text -->
+  <text x="250" y="150" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="#0d6efd">404</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="100" r="20" fill="#e9ecef" />
+  <circle cx="350" cy="200" r="30" fill="#e9ecef" />
+  <circle cx="400" cy="80" r="15" fill="#e9ecef" />
+  <circle cx="100" cy="220" r="25" fill="#e9ecef" />
+  
+  <!-- Magnifying Glass -->
+  <g transform="translate(250, 200) scale(0.8)">
+    <circle cx="0" cy="-20" r="40" fill="none" stroke="#6c757d" stroke-width="8" />
+    <line x1="25" y1="15" x2="60" y2="50" stroke="#6c757d" stroke-width="10" stroke-linecap="round" />
+    <line x1="-20" y1="-20" x2="20" y2="-20" stroke="#dc3545" stroke-width="8" stroke-linecap="round" />
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="#dc3545" stroke-width="8" stroke-linecap="round" />
+  </g>
+  
+  <!-- Page Not Found Text -->
+  <text x="250" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Halaman Tidak Ditemukan</text>
+</svg>

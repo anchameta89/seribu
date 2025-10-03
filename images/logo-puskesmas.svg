@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <g transform="translate(0,0)">
+    <!-- Teks Puskesmas Kec. Kep. Seribu Selatan -->
+    <text x="200" y="30" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold" fill="#000">Puskesmas Kec. Kep. Seribu Selatan</text>
+    
+    <!-- Perahu Merah -->
+    <path d="M125,120 C150,100 250,100 275,120 L290,130 L110,130 Z" fill="#e74c3c" />
+    
+    <!-- Gelombang Biru -->
+    <path d="M5,150 C30,140 50,160 75,150 C100,140 125,160 150,150 C175,140 200,160 225,150 C250,140 275,160 300,150 C325,140 350,160 375,150 L395,150 L395,180 L5,180 Z" fill="#3498db" />
+    
+    <!-- Lingkaran Putih dengan Salib Hijau -->
+    <circle cx="200" cy="80" r="30" fill="#fff" stroke="#000" stroke-width="2" />
+    <rect x="185" y="65" width="30" height="10" fill="#2ecc71" />
+    <rect x="195" y="55" width="10" height="30" fill="#2ecc71" />
+    
+    <!-- Jangkar -->
+    <path d="M300,80 L320,60 M300,80 L280,60 M300,80 L300,130 M290,110 C290,110 270,120 300,140 C330,120 310,110 310,110" fill="none" stroke="#000" stroke-width="3" />
+    
+    <!-- Rantai -->
+    <path d="M300,60 C310,50 320,70 330,60 C340,50 350,70 360,60 C370,50 380,70 390,60" fill="none" stroke="#000" stroke-width="3" />
+  </g>
+</svg>

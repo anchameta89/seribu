@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- 500 Text -->
+  <text x="250" y="150" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="#fd7e14">500</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="100" r="20" fill="#fff3cd" />
+  <circle cx="350" cy="200" r="30" fill="#fff3cd" />
+  <circle cx="400" cy="80" r="15" fill="#fff3cd" />
+  <circle cx="100" cy="220" r="25" fill="#fff3cd" />
+  
+  <!-- Server Error Icon -->
+  <g transform="translate(250, 200) scale(0.8)">
+    <!-- Server -->
+    <rect x="-40" y="-30" width="80" height="60" rx="5" ry="5" fill="#6c757d" />
+    
+    <!-- Server Lights -->
+    <circle cx="-25" cy="-15" r="5" fill="#dc3545" />
+    <circle cx="-25" cy="0" r="5" fill="#ffc107" />
+    <circle cx="-25" cy="15" r="5" fill="#28a745" />
+    
+    <!-- Server Lines -->
+    <line x1="-10" y1="-15" x2="30" y2="-15" stroke="#f8f9fa" stroke-width="3" />
+    <line x1="-10" y1="0" x2="30" y2="0" stroke="#f8f9fa" stroke-width="3" />
+    <line x1="-10" y1="15" x2="30" y2="15" stroke="#f8f9fa" stroke-width="3" />
+    
+    <!-- Lightning Bolt -->
+    <path d="M 60,-40 L 40,-5 L 55,-5 L 35,40 L 60,0 L 45,0 Z" fill="#ffc107" />
+  </g>
+  
+  <!-- Server Error Text -->
+  <text x="250" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Kesalahan Server Internal</text>
+</svg>

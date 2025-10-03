@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Kesehatan - Puskesmas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo-puskesmas.png" alt="Logo Puskesmas">
+                    <div class="logo-text">
+                        <h1>PUSKESMAS</h1>
+                        <p>Pelayanan Kesehatan Masyarakat</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span>Hubungi Kami</span>
+                            <p>021-12345678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <p>info@puskesmas.go.id</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span>Jam Operasional</span>
+                            <p>Senin-Jumat: 08.00 - 16.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="#">Profil Puskesmas <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="visi-misi.html">Visi dan Misi</a></li>
+                            <li><a href="tata-nilai.html">Tata Nilai</a></li>
+                            <li><a href="struktur-organisasi.html">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Informasi <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="informasi-pelayanan.html">Informasi Pelayanan</a></li>
+                            <li><a href="jam-pelayanan.html">Jam Pelayanan</a></li>
+                            <li><a href="alur-pendaftaran.html">Alur Pendaftaran Pasien</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Jejaring Puskesmas <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pustu-untung-jawa.html">Pustu Untung Jawa</a></li>
+                            <li><a href="pustu-pulau-pari.html">Pustu Pulau Pari</a></li>
+                            <li><a href="pustu-pulau-lancang.html">Pustu Pulau Lancang</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Data <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="laporan.html">Laporan</a></li>
+                            <li><a href="aturan.html">Aturan</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Berita Kesehatan</h1>
+            <ul class="breadcrumb">
+                <li><a href="../index.html">Beranda</a></li>
+                <li>Berita Kesehatan</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Berita Content -->
+    <section class="berita-section">
+        <div class="container">
+            <div class="berita-wrapper">
+                <!-- Sidebar -->
+                <div class="berita-sidebar">
+                    <div class="sidebar-widget search-widget">
+                        <h3>Pencarian</h3>
+                        <form class="search-form">
+                            <input type="text" placeholder="Cari berita...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget category-widget">
+                        <h3>Kategori</h3>
+                        <ul>
+                            <li><a href="#">Kesehatan Umum <span>(12)</span></a></li>
+                            <li><a href="#">Kesehatan Ibu & Anak <span>(8)</span></a></li>
+                            <li><a href="#">Penyakit Menular <span>(10)</span></a></li>
+                            <li><a href="#">Gizi & Nutrisi <span>(7)</span></a></li>
+                            <li><a href="#">Kesehatan Lingkungan <span>(5)</span></a></li>
+                            <li><a href="#">Program Puskesmas <span>(9)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget recent-posts-widget">
+                        <h3>Berita Terbaru</h3>
+                        <div class="recent-posts">
+                            <div class="recent-post-item">
+                                <div class="post-thumb">
+                                    <img src="../images/news-thumb-1.jpg" alt="Berita Terbaru">
+                                </div>
+                                <div class="post-info">
+                                    <h4><a href="#">Pentingnya Vaksinasi COVID-19 untuk Semua Usia</a></h4>
+                                    <span><i class="far fa-calendar-alt"></i> 15 Juni 2023</span>
+                                </div>
+                            </div>
+                            <div class="recent-post-item">
+                                <div class="post-thumb">
+                                    <img src="../images/news-thumb-2.jpg" alt="Berita Terbaru">
+                                </div>
+                                <div class="post-info">
+                                    <h4><a href="#">Tips Menjaga Kesehatan di Musim Pancaroba</a></h4>
+                                    <span><i class="far fa-calendar-alt"></i> 10 Juni 2023</span>
+                                </div>
+                            </div>
+                            <div class="recent-post-item">
+                                <div class="post-thumb">
+                                    <img src="../images/news-thumb-3.jpg" alt="Berita Terbaru">
+                                </div>
+                                <div class="post-info">
+                                    <h4><a href="#">Program Posyandu Lansia Bulan Ini</a></h4>
+                                    <span><i class="far fa-calendar-alt"></i> 5 Juni 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget tags-widget">
+                        <h3>Tag Populer</h3>
+                        <div class="tags">
+                            <a href="#">COVID-19</a>
+                            <a href="#">Vaksinasi</a>
+                            <a href="#">Kesehatan Anak</a>
+                            <a href="#">Gizi</a>
+                            <a href="#">Hipertensi</a>
+                            <a href="#">Diabetes</a>
+                            <a href="#">Posyandu</a>
+                            <a href="#">Sanitasi</a>
+                            <a href="#">Kesehatan Mental</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="berita-main">
+                    <div class="berita-grid">
+                        <!-- Berita Item 1 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-1.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Kesehatan Umum</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 20 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Dr. Andi Setiawan</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Pentingnya Vaksinasi COVID-19 untuk Semua Usia</a></h3>
+                                <p>Vaksinasi COVID-19 merupakan langkah penting dalam upaya pengendalian pandemi. Artikel ini membahas manfaat vaksinasi untuk berbagai kelompok usia dan menjawab keraguan masyarakat.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Berita Item 2 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-2.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Kesehatan Lingkungan</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 18 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Dra. Siti Nurhaliza</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Tips Menjaga Kesehatan di Musim Pancaroba</a></h3>
+                                <p>Musim pancaroba sering kali membawa berbagai penyakit. Simak tips-tips praktis untuk menjaga kesehatan keluarga Anda selama perubahan musim agar terhindar dari penyakit umum.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Berita Item 3 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-3.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Program Puskesmas</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 15 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Tim Puskesmas</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Program Posyandu Lansia Bulan Ini</a></h3>
+                                <p>Puskesmas mengadakan program Posyandu Lansia dengan berbagai kegiatan pemeriksaan kesehatan gratis dan edukasi untuk menjaga kesehatan di usia senja. Simak jadwal dan lokasinya.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Berita Item 4 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-4.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Kesehatan Ibu & Anak</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 12 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Dr. Maya Indira</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Pentingnya Imunisasi Dasar Lengkap untuk Bayi</a></h3>
+                                <p>Imunisasi dasar lengkap sangat penting untuk melindungi bayi dari berbagai penyakit berbahaya. Artikel ini membahas jenis-jenis imunisasi dan jadwal pemberian yang tepat.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Berita Item 5 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-5.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Gizi & Nutrisi</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 10 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Ns. Budi Santoso</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Menu Sehat untuk Penderita Diabetes</a></h3>
+                                <p>Pola makan yang tepat sangat penting bagi penderita diabetes. Simak rekomendasi menu sehat dan tips mengatur pola makan untuk mengendalikan kadar gula darah.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Berita Item 6 -->
+                        <div class="berita-item">
+                            <div class="berita-img">
+                                <img src="../images/news-6.jpg" alt="Berita Kesehatan">
+                                <div class="berita-category">Penyakit Menular</div>
+                            </div>
+                            <div class="berita-content">
+                                <div class="berita-meta">
+                                    <span><i class="far fa-calendar-alt"></i> 8 Juni 2023</span>
+                                    <span><i class="far fa-user"></i> Dr. Rudi Hartono</span>
+                                </div>
+                                <h3><a href="berita-detail.html">Waspada Demam Berdarah di Musim Hujan</a></h3>
+                                <p>Musim hujan meningkatkan risiko penyebaran demam berdarah. Pelajari cara pencegahan, gejala awal, dan tindakan yang harus dilakukan jika terdapat gejala demam berdarah.</p>
+                                <a href="berita-detail.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <ul>
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-widget about-widget">
+                        <h3>Tentang Kami</h3>
+                        <p>Puskesmas adalah fasilitas pelayanan kesehatan yang menyelenggarakan upaya kesehatan masyarakat dan upaya kesehatan perseorangan tingkat pertama.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3>Link Cepat</h3>
+                        <ul>
+                            <li><a href="../index.html">Beranda</a></li>
+                            <li><a href="visi-misi.html">Visi dan Misi</a></li>
+                            <li><a href="berita.html">Berita</a></li>
+                            <li><a href="informasi-pelayanan.html">Informasi Pelayanan</a></li>
+                            <li><a href="alur-pendaftaran.html">Alur Pendaftaran</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget services-widget">
+                        <h3>Layanan Kami</h3>
+                        <ul>
+                            <li><a href="#">Pemeriksaan Umum</a></li>
+                            <li><a href="#">Kesehatan Gigi</a></li>
+                            <li><a href="#">Kesehatan Ibu & Anak</a></li>
+                            <li><a href="#">Farmasi</a></li>
+                            <li><a href="#">Laboratorium</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3>Hubungi Kami</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Jl. Kesehatan No. 123, Kecamatan Sehat, Kota Sejahtera</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <p>021-12345678</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <p>info@puskesmas.go.id</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <p>Senin-Jumat: 08.00 - 16.00</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Puskesmas. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+
+    <style>
+        /* Page Banner Styles */
+        .page-banner {
+            background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0.8)), url('../images/banner-bg.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-banner h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .breadcrumb li {
+            position: relative;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 10px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Berita Section Styles */
+        .berita-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .berita-wrapper {
+            display: flex;
+            gap: 40px;
+        }
+
+        /* Sidebar Styles */
+        .berita-sidebar {
+            width: 30%;
+        }
+
+        .sidebar-widget {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #0077b6;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .sidebar-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #0077b6;
+        }
+
+        /* Search Widget */
+        .search-form {
+            display: flex;
+            position: relative;
+        }
+
+        .search-form input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .search-form button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50px;
+            background-color: #0077b6;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        /* Category Widget */
+        .category-widget ul {
+            list-style: none;
+        }
+
+        .category-widget li {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+
+        .category-widget li:last-child {
+            border-bottom: none;
+        }
+
+        .category-widget a {
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .category-widget a:hover {
+            color: #0077b6;
+        }
+
+        .category-widget span {
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            padding: 2px 8px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Recent Posts Widget */
+        .recent-post-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .recent-post-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .post-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .post-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-info {
+            margin-left: 15px;
+        }
+
+        .post-info h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .post-info h4 a {
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .post-info h4 a:hover {
+            color: #0077b6;
+        }
+
+        .post-info span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .post-info span i {
+            margin-right: 5px;
+        }
+
+        /* Tags Widget */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tags a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            color: #666;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .tags a:hover {
+            background-color: #0077b6;
+            color: #fff;
+        }
+
+        /* Main Content Styles */
+        .berita-main {
+            width: 70%;
+        }
+
+        .berita-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .berita-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .berita-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .berita-img {
+            position: relative;
+            height: 200px;
+        }
+
+        .berita-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .berita-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #0077b6;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .berita-content {
+            padding: 25px;
+        }
+
+        .berita-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .berita-meta span {
+            font-size: 13px;
+            color: #888;
+        }
+
+        .berita-meta span i {
+            margin-right: 5px;
+            color: #0077b6;
+        }
+
+        .berita-content h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .berita-content h3 a {
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .berita-content h3 a:hover {
+            color: #0077b6;
+        }
+
+        .berita-content p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #0077b6;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more i {
+            margin-left: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #005b8c;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Pagination Styles */
+        .pagination {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .pagination ul {
+            display: inline-flex;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 5px;
+        }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+        .pagination a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            color: #666;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .pagination a.active, .pagination a:hover {
+            background-color: #0077b6;
+            color: #fff;
+        }
+
+        @media (max-width: 992px) {
+            .berita-wrapper {
+                flex-direction: column;
+            }
+
+            .berita-sidebar, .berita-main {
+                width: 100%;
+            }
+
+            .berita-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .berita-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>

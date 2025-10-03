@@ -1,0 +1,81 @@
+/* Sambutan Page Styles */
+.sambutan-content {
+    padding: 60px 0;
+}
+
+.sambutan-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.sambutan-image {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.sambutan-image .kepala-photo {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.sambutan-image h3 {
+    margin: 10px 0 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+.sambutan-image .jabatan {
+    color: #666;
+    font-style: italic;
+    margin-top: 0;
+}
+
+.sambutan-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.sambutan-text h2 {
+    color: #0070c0;
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid #0070c0;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.sambutan-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+}
+
+.signature img {
+    max-width: 150px;
+    margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sambutan-wrapper {
+        flex-direction: column;
+    }
+    
+    .sambutan-image {
+        margin: 0 auto;
+    }
+    
+    .sambutan-text h2 {
+        font-size: 24px;
+    }
+}

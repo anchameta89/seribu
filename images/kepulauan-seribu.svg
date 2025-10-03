@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- Pemandangan Kepulauan Seribu -->
+  <rect width="800" height="600" fill="#e3f2fd"/>
+  
+  <!-- Langit -->
+  <rect x="0" y="0" width="800" height="150" fill="#bbdefb"/>
+  
+  <!-- Laut -->
+  <rect x="0" y="150" width="800" height="450" fill="#4fc3f7"/>
+  
+  <!-- Gradasi Laut -->
+  <rect x="0" y="150" width="800" height="100" fill="#29b6f6" opacity="0.7"/>
+  <rect x="0" y="250" width="800" height="100" fill="#03a9f4" opacity="0.5"/>
+  <rect x="0" y="350" width="800" height="100" fill="#039be5" opacity="0.3"/>
+  
+  <!-- Terumbu Karang -->
+  <path d="M100,400 Q150,380 200,400 T300,400 T400,400 T500,400 T600,400 T700,400 T800,400 V600 H0 V400 Q50,380 100,400" fill="#80deea" opacity="0.6"/>
+  <path d="M0,450 Q50,430 100,450 T200,450 T300,450 T400,450 T500,450 T600,450 T700,450 T800,450 V600 H0 Z" fill="#4dd0e1" opacity="0.4"/>
+  <path d="M0,500 Q50,480 100,500 T200,500 T300,500 T400,500 T500,500 T600,500 T700,500 T800,500 V600 H0 Z" fill="#26c6da" opacity="0.3"/>
+  
+  <!-- Pulau Kiri -->
+  <path d="M50,350 Q100,300 150,350 T250,350 Q300,330 350,350 V500 H50 Z" fill="#fdd835"/>
+  
+  <!-- Vegetasi Pulau Kiri -->
+  <circle cx="100" cy="330" r="30" fill="#43a047"/>
+  <circle cx="80" cy="320" r="25" fill="#2e7d32"/>
+  <circle cx="120" cy="320" r="25" fill="#2e7d32"/>
+  <circle cx="150" cy="330" r="20" fill="#43a047"/>
+  <circle cx="170" cy="320" r="15" fill="#2e7d32"/>
+  <circle cx="190" cy="330" r="25" fill="#43a047"/>
+  <circle cx="210" cy="320" r="20" fill="#2e7d32"/>
+  <circle cx="230" cy="330" r="15" fill="#43a047"/>
+  <circle cx="250" cy="320" r="25" fill="#2e7d32"/>
+  <circle cx="270" cy="330" r="20" fill="#43a047"/>
+  <circle cx="290" cy="320" r="15" fill="#2e7d32"/>
+  
+  <!-- Perahu di Pulau Kiri -->
+  <path d="M80,380 L120,380 L130,390 L70,390 Z" fill="#0277bd"/>
+  <path d="M90,380 L110,380 L110,370 L90,370 Z" fill="#01579b"/>
+  
+  <!-- Perahu di Laut -->
+  <path d="M350,380 L400,380 L410,390 L340,390 Z" fill="#ffa000"/>
+  <path d="M370,380 L380,380 L380,370 L370,370 Z" fill="#ff6f00"/>
+  
+  <path d="M450,400 L500,400 L510,410 L440,410 Z" fill="#0277bd"/>
+  <path d="M470,400 L480,400 L480,390 L470,390 Z" fill="#01579b"/>
+  
+  <!-- Jembatan -->
+  <path d="M250,380 L600,380 L600,390 L250,390 Z" fill="#e91e63"/>
+  <path d="M250,390 L600,390 L600,400 L250,400 Z" fill="#d81b60"/>
+  
+  <!-- Tiang Jembatan -->
+  <rect x="300" y="380" width="10" height="50" fill="#c2185b"/>
+  <rect x="400" y="380" width="10" height="50" fill="#c2185b"/>
+  <rect x="500" y="380" width="10" height="50" fill="#c2185b"/>
+  
+  <!-- Pulau Kanan -->
+  <path d="M600,350 Q650,300 700,350 T800,350 V500 H600 Z" fill="#fdd835"/>
+  
+  <!-- Vegetasi Pulau Kanan -->
+  <circle cx="650" cy="330" r="30" fill="#43a047"/>
+  <circle cx="630" cy="320" r="25" fill="#2e7d32"/>
+  <circle cx="670" cy="320" r="25" fill="#2e7d32"/>
+  <circle cx="700" cy="330" r="20" fill="#43a047"/>
+  <circle cx="720" cy="320" r="15" fill="#2e7d32"/>
+  <circle cx="740" cy="330" r="25" fill="#43a047"/>
+  <circle cx="760" cy="320" r="20" fill="#2e7d32"/>
+  <circle cx="780" cy="330" r="15" fill="#43a047"/>
+  
+  <!-- Matahari -->
+  <circle cx="700" cy="100" r="40" fill="#ffeb3b"/>
+  <circle cx="700" cy="100" r="30" fill="#fdd835"/>
+</svg>

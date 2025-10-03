@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - Puskesmas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="logo">
+                    <img src="../images/logo-puskesmas.png" alt="Logo Puskesmas">
+                    <div class="logo-text">
+                        <h1>PUSKESMAS</h1>
+                        <p>Pelayanan Kesehatan Masyarakat</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <span>Hubungi Kami</span>
+                            <p>021-12345678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <p>info@puskesmas.go.id</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span>Jam Operasional</span>
+                            <p>Senin-Jumat: 08.00 - 16.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="#">Profil Puskesmas <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="visi-misi.html">Visi dan Misi</a></li>
+                            <li><a href="tata-nilai.html">Tata Nilai</a></li>
+                            <li><a href="struktur-organisasi.html">Struktur Organisasi</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="berita.html">Berita</a></li>
+                    <li class="dropdown">
+                        <a href="#">Informasi <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="informasi-pelayanan.html">Informasi Pelayanan</a></li>
+                            <li><a href="jam-pelayanan.html">Jam Pelayanan</a></li>
+                            <li><a href="alur-pendaftaran.html">Alur Pendaftaran Pasien</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Jejaring Puskesmas <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pustu-untung-jawa.html">Pustu Untung Jawa</a></li>
+                            <li><a href="pustu-pulau-pari.html">Pustu Pulau Pari</a></li>
+                            <li><a href="pustu-pulau-lancang.html">Pustu Pulau Lancang</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#">Data <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="laporan.html">Laporan</a></li>
+                            <li><a href="aturan.html">Aturan</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Laporan Kesehatan</h1>
+            <ul class="breadcrumb">
+                <li><a href="../index.html">Beranda</a></li>
+                <li>Data</li>
+                <li>Laporan</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section class="reports-section">
+        <div class="container">
+            <div class="section-intro">
+                <h2>Laporan Kesehatan Masyarakat</h2>
+                <p>Halaman ini menyajikan data dan laporan kesehatan masyarakat di wilayah kerja Puskesmas. Data ini diperbarui secara berkala dan dapat digunakan sebagai referensi untuk penelitian, perencanaan program kesehatan, dan evaluasi kinerja pelayanan kesehatan.</p>
+            </div>
+
+            <!-- Report Filters -->
+            <div class="report-filters">
+                <div class="filter-group">
+                    <label for="report-type">Jenis Laporan:</label>
+                    <select id="report-type" class="filter-select">
+                        <option value="all">Semua Laporan</option>
+                        <option value="disease">Pola Penyakit</option>
+                        <option value="maternal">Kesehatan Ibu & Anak</option>
+                        <option value="immunization">Cakupan Imunisasi</option>
+                        <option value="nutrition">Status Gizi</option>
+                        <option value="environmental">Kesehatan Lingkungan</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="report-year">Tahun:</label>
+                    <select id="report-year" class="filter-select">
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="report-quarter">Periode:</label>
+                    <select id="report-quarter" class="filter-select">
+                        <option value="all">Semua Periode</option>
+                        <option value="q1">Triwulan 1</option>
+                        <option value="q2">Triwulan 2</option>
+                        <option value="q3">Triwulan 3</option>
+                        <option value="q4">Triwulan 4</option>
+                    </select>
+                </div>
+                <button class="filter-button" id="apply-filter">Terapkan Filter</button>
+            </div>
+
+            <!-- Report Dashboard -->
+            <div class="report-dashboard">
+                <div class="dashboard-header">
+                    <h3>Dashboard Kesehatan Tahun 2023</h3>
+                    <div class="dashboard-actions">
+                        <button class="action-button" id="download-report"><i class="fas fa-download"></i> Unduh Laporan</button>
+                        <button class="action-button" id="print-report"><i class="fas fa-print"></i> Cetak</button>
+                    </div>
+                </div>
+
+                <!-- Dashboard Cards -->
+                <div class="dashboard-cards">
+                    <div class="dashboard-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Total Kunjungan</h4>
+                            <div class="card-value">24,567</div>
+                            <div class="card-trend positive">+12.5% <i class="fas fa-arrow-up"></i></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-icon">
+                            <i class="fas fa-baby"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Cakupan Imunisasi</h4>
+                            <div class="card-value">92.8%</div>
+                            <div class="card-trend positive">+3.2% <i class="fas fa-arrow-up"></i></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Kasus Hipertensi</h4>
+                            <div class="card-value">1,245</div>
+                            <div class="card-trend negative">+8.7% <i class="fas fa-arrow-up"></i></div>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="card-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4>Persalinan Ditolong Nakes</h4>
+                            <div class="card-value">98.2%</div>
+                            <div class="card-trend positive">+1.5% <i class="fas fa-arrow-up"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <h4>Pola Penyakit 10 Besar</h4>
+                        <canvas id="diseaseChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Tren Kunjungan Bulanan</h4>
+                        <canvas id="visitsChart"></canvas>
+                    </div>
+                    <div class="chart-container full-width">
+                        <h4>Cakupan Program Kesehatan</h4>
+                        <canvas id="programsChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Status Gizi Balita</h4>
+                        <canvas id="nutritionChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Distribusi Pasien Berdasarkan Usia</h4>
+                        <canvas id="ageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Reports -->
+            <div class="detailed-reports">
+                <h3>Laporan Terperinci</h3>
+                <div class="report-tabs">
+                    <button class="tab-button active" data-tab="disease-tab">Pola Penyakit</button>
+                    <button class="tab-button" data-tab="maternal-tab">KIA & KB</button>
+                    <button class="tab-button" data-tab="immunization-tab">Imunisasi</button>
+                    <button class="tab-button" data-tab="nutrition-tab">Status Gizi</button>
+                    <button class="tab-button" data-tab="environmental-tab">Kesehatan Lingkungan</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Disease Patterns Tab -->
+                    <div id="disease-tab" class="tab-pane active">
+                        <div class="report-description">
+                            <p>Laporan pola penyakit menunjukkan distribusi dan tren penyakit yang ditemukan di wilayah kerja Puskesmas. Data ini penting untuk perencanaan program pencegahan dan pengendalian penyakit.</p>
+                        </div>
+                        <div class="report-table-container">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Jenis Penyakit</th>
+                                        <th>Jumlah Kasus</th>
+                                        <th>Persentase</th>
+                                        <th>Tren</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Infeksi Saluran Pernapasan Akut (ISPA)</td>
+                                        <td>3,245</td>
+                                        <td>18.7%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 2.3%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Hipertensi</td>
+                                        <td>2,876</td>
+                                        <td>16.5%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 3.1%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Penyakit Gastritis</td>
+                                        <td>2,154</td>
+                                        <td>12.4%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 1.8%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Diabetes Melitus</td>
+                                        <td>1,987</td>
+                                        <td>11.4%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 4.2%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Penyakit Kulit</td>
+                                        <td>1,654</td>
+                                        <td>9.5%</td>
+                                        <td><span class="trend-indicator positive"><i class="fas fa-arrow-down"></i> 1.2%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Diare</td>
+                                        <td>1,432</td>
+                                        <td>8.2%</td>
+                                        <td><span class="trend-indicator positive"><i class="fas fa-arrow-down"></i> 2.5%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Penyakit Gigi dan Mulut</td>
+                                        <td>1,245</td>
+                                        <td>7.2%</td>
+                                        <td><span class="trend-indicator neutral"><i class="fas fa-equals"></i> 0.3%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Penyakit Sendi</td>
+                                        <td>1,123</td>
+                                        <td>6.5%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 1.7%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Konjungtivitis</td>
+                                        <td>876</td>
+                                        <td>5.0%</td>
+                                        <td><span class="trend-indicator positive"><i class="fas fa-arrow-down"></i> 3.2%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Penyakit Jantung</td>
+                                        <td>798</td>
+                                        <td>4.6%</td>
+                                        <td><span class="trend-indicator negative"><i class="fas fa-arrow-up"></i> 2.8%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Maternal and Child Health Tab -->
+                    <div id="maternal-tab" class="tab-pane">
+                        <div class="report-description">
+                            <p>Laporan Kesehatan Ibu dan Anak (KIA) serta Keluarga Berencana (KB) mencakup data tentang pemeriksaan kehamilan, persalinan, kesehatan bayi dan balita, serta penggunaan kontrasepsi di wilayah kerja Puskesmas.</p>
+                        </div>
+                        <div class="report-table-container">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Indikator</th>
+                                        <th>Target</th>
+                                        <th>Capaian</th>
+                                        <th>Persentase</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cakupan K1 (Kunjungan Pertama Ibu Hamil)</td>
+                                        <td>95%</td>
+                                        <td>92.5%</td>
+                                        <td>97.4%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cakupan K4 (Kunjungan Keempat Ibu Hamil)</td>
+                                        <td>90%</td>
+                                        <td>87.2%</td>
+                                        <td>96.9%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Persalinan Ditolong Tenaga Kesehatan</td>
+                                        <td>95%</td>
+                                        <td>98.2%</td>
+                                        <td>103.4%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kunjungan Neonatal Lengkap (KN Lengkap)</td>
+                                        <td>90%</td>
+                                        <td>89.5%</td>
+                                        <td>99.4%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deteksi Dini Risiko Tinggi Kehamilan</td>
+                                        <td>85%</td>
+                                        <td>82.7%</td>
+                                        <td>97.3%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Penanganan Komplikasi Kebidanan</td>
+                                        <td>80%</td>
+                                        <td>78.5%</td>
+                                        <td>98.1%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kunjungan Bayi (0-11 bulan)</td>
+                                        <td>90%</td>
+                                        <td>88.3%</td>
+                                        <td>98.1%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pelayanan Anak Balita (12-59 bulan)</td>
+                                        <td>85%</td>
+                                        <td>79.6%</td>
+                                        <td>93.6%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peserta KB Aktif</td>
+                                        <td>70%</td>
+                                        <td>68.4%</td>
+                                        <td>97.7%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peserta KB Baru</td>
+                                        <td>10%</td>
+                                        <td>8.7%</td>
+                                        <td>87.0%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Immunization Tab -->
+                    <div id="immunization-tab" class="tab-pane">
+                        <div class="report-description">
+                            <p>Laporan cakupan imunisasi menunjukkan persentase anak yang telah mendapatkan imunisasi sesuai dengan jadwal yang ditetapkan dalam program imunisasi nasional.</p>
+                        </div>
+                        <div class="report-table-container">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Jenis Imunisasi</th>
+                                        <th>Sasaran</th>
+                                        <th>Realisasi</th>
+                                        <th>Cakupan</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BCG</td>
+                                        <td>1,245</td>
+                                        <td>1,220</td>
+                                        <td>98.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DPT-HB-Hib 1</td>
+                                        <td>1,245</td>
+                                        <td>1,208</td>
+                                        <td>97.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DPT-HB-Hib 2</td>
+                                        <td>1,245</td>
+                                        <td>1,195</td>
+                                        <td>96.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DPT-HB-Hib 3</td>
+                                        <td>1,245</td>
+                                        <td>1,183</td>
+                                        <td>95.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Polio 1</td>
+                                        <td>1,245</td>
+                                        <td>1,208</td>
+                                        <td>97.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Polio 2</td>
+                                        <td>1,245</td>
+                                        <td>1,195</td>
+                                        <td>96.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Polio 3</td>
+                                        <td>1,245</td>
+                                        <td>1,183</td>
+                                        <td>95.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Polio 4</td>
+                                        <td>1,245</td>
+                                        <td>1,170</td>
+                                        <td>94.0%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>IPV</td>
+                                        <td>1,245</td>
+                                        <td>1,183</td>
+                                        <td>95.0%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Campak-Rubella</td>
+                                        <td>1,245</td>
+                                        <td>1,158</td>
+                                        <td>93.0%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Imunisasi Dasar Lengkap</td>
+                                        <td>1,245</td>
+                                        <td>1,145</td>
+                                        <td>92.0%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Nutrition Status Tab -->
+                    <div id="nutrition-tab" class="tab-pane">
+                        <div class="report-description">
+                            <p>Laporan status gizi menunjukkan kondisi gizi balita di wilayah kerja Puskesmas berdasarkan pengukuran antropometri (berat badan menurut umur, tinggi badan menurut umur, dan berat badan menurut tinggi badan).</p>
+                        </div>
+                        <div class="report-table-container">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Indikator</th>
+                                        <th>Jumlah Balita</th>
+                                        <th>Persentase</th>
+                                        <th>Target</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Balita Gizi Buruk (BB/U < -3 SD)</td>
+                                        <td>32</td>
+                                        <td>1.2%</td>
+                                        <td>< 1%</td>
+                                        <td><span class="status-indicator poor">Kurang</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Gizi Kurang (-3 SD ≤ BB/U < -2 SD)</td>
+                                        <td>187</td>
+                                        <td>7.1%</td>
+                                        <td>< 10%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Gizi Baik (-2 SD ≤ BB/U ≤ 2 SD)</td>
+                                        <td>2,345</td>
+                                        <td>89.2%</td>
+                                        <td>> 80%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Gizi Lebih (BB/U > 2 SD)</td>
+                                        <td>65</td>
+                                        <td>2.5%</td>
+                                        <td>< 5%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Sangat Pendek (TB/U < -3 SD)</td>
+                                        <td>78</td>
+                                        <td>3.0%</td>
+                                        <td>< 5%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Pendek (-3 SD ≤ TB/U < -2 SD)</td>
+                                        <td>265</td>
+                                        <td>10.1%</td>
+                                        <td>< 15%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Normal (-2 SD ≤ TB/U ≤ 2 SD)</td>
+                                        <td>2,245</td>
+                                        <td>85.4%</td>
+                                        <td>> 80%</td>
+                                        <td><span class="status-indicator excellent">Sangat Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Tinggi (TB/U > 2 SD)</td>
+                                        <td>41</td>
+                                        <td>1.5%</td>
+                                        <td>< 5%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Sangat Kurus (BB/TB < -3 SD)</td>
+                                        <td>45</td>
+                                        <td>1.7%</td>
+                                        <td>< 2%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Balita Kurus (-3 SD ≤ BB/TB < -2 SD)</td>
+                                        <td>156</td>
+                                        <td>5.9%</td>
+                                        <td>< 8%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Environmental Health Tab -->
+                    <div id="environmental-tab" class="tab-pane">
+                        <div class="report-description">
+                            <p>Laporan kesehatan lingkungan mencakup data tentang kondisi sanitasi, akses air bersih, pengelolaan sampah, dan faktor lingkungan lainnya yang mempengaruhi kesehatan masyarakat di wilayah kerja Puskesmas.</p>
+                        </div>
+                        <div class="report-table-container">
+                            <table class="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Indikator</th>
+                                        <th>Jumlah Rumah</th>
+                                        <th>Persentase</th>
+                                        <th>Target</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rumah dengan Akses Air Bersih</td>
+                                        <td>4,567</td>
+                                        <td>87.5%</td>
+                                        <td>90%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Jamban Sehat</td>
+                                        <td>4,325</td>
+                                        <td>82.9%</td>
+                                        <td>85%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Pengelolaan Sampah</td>
+                                        <td>3,987</td>
+                                        <td>76.4%</td>
+                                        <td>80%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Saluran Pembuangan Air Limbah</td>
+                                        <td>3,756</td>
+                                        <td>72.0%</td>
+                                        <td>75%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah Bebas Jentik Nyamuk</td>
+                                        <td>4,123</td>
+                                        <td>79.0%</td>
+                                        <td>85%</td>
+                                        <td><span class="status-indicator moderate">Cukup</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Ventilasi Cukup</td>
+                                        <td>4,432</td>
+                                        <td>84.9%</td>
+                                        <td>80%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Pencahayaan Cukup</td>
+                                        <td>4,567</td>
+                                        <td>87.5%</td>
+                                        <td>80%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah dengan Lantai Kedap Air</td>
+                                        <td>4,678</td>
+                                        <td>89.6%</td>
+                                        <td>85%</td>
+                                        <td><span class="status-indicator good">Baik</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rumah Sehat (Memenuhi Semua Kriteria)</td>
+                                        <td>3,245</td>
+                                        <td>62.2%</td>
+                                        <td>70%</td>
+                                        <td><span class="status-indicator poor">Kurang</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report Downloads -->
+            <div class="report-downloads">
+                <h3>Unduh Laporan Lengkap</h3>
+                <p>Anda dapat mengunduh laporan lengkap dalam format PDF atau Excel untuk keperluan analisis lebih lanjut.</p>
+                <div class="download-options">
+                    <a href="#" class="download-option">
+                        <div class="download-icon">
+                            <i class="far fa-file-pdf"></i>
+                        </div>
+                        <div class="download-info">
+                            <h4>Laporan Tahunan 2023</h4>
+                            <p>Format PDF (2.5 MB)</p>
+                        </div>
+                    </a>
+                    <a href="#" class="download-option">
+                        <div class="download-icon">
+                            <i class="far fa-file-excel"></i>
+                        </div>
+                        <div class="download-info">
+                            <h4>Data Statistik 2023</h4>
+                            <p>Format Excel (1.8 MB)</p>
+                        </div>
+                    </a>
+                    <a href="#" class="download-option">
+                        <div class="download-icon">
+                            <i class="far fa-file-pdf"></i>
+                        </div>
+                        <div class="download-info">
+                            <h4>Profil Kesehatan 2023</h4>
+                            <p>Format PDF (3.2 MB)</p>
+                        </div>
+                    </a>
+                    <a href="#" class="download-option">
+                        <div class="download-icon">
+                            <i class="far fa-file-powerpoint"></i>
+                        </div>
+                        <div class="download-info">
+                            <h4>Presentasi Kinerja 2023</h4>
+                            <p>Format PPT (4.5 MB)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-widget about-widget">
+                        <h3>Tentang Kami</h3>
+                        <p>Puskesmas adalah fasilitas pelayanan kesehatan yang menyelenggarakan upaya kesehatan masyarakat dan upaya kesehatan perseorangan tingkat pertama.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-widget links-widget">
+                        <h3>Link Cepat</h3>
+                        <ul>
+                            <li><a href="../index.html">Beranda</a></li>
+                            <li><a href="visi-misi.html">Visi dan Misi</a></li>
+                            <li><a href="berita.html">Berita</a></li>
+                            <li><a href="informasi-pelayanan.html">Informasi Pelayanan</a></li>
+                            <li><a href="alur-pendaftaran.html">Alur Pendaftaran</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget services-widget">
+                        <h3>Layanan Kami</h3>
+                        <ul>
+                            <li><a href="#">Pemeriksaan Umum</a></li>
+                            <li><a href="#">Kesehatan Gigi</a></li>
+                            <li><a href="#">Kesehatan Ibu & Anak</a></li>
+                            <li><a href="#">Farmasi</a></li>
+                            <li><a href="#">Laboratorium</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget contact-widget">
+                        <h3>Hubungi Kami</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Jl. Kesehatan No. 123, Kecamatan Sehat, Kota Sejahtera</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <p>021-12345678</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <p>info@puskesmas.go.id</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <p>Senin-Jumat: 08.00 - 16.00</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Puskesmas. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        // Initialize Charts when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Disease Chart
+            const diseaseCtx = document.getElementById('diseaseChart').getContext('2d');
+            const diseaseChart = new Chart(diseaseCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['ISPA', 'Hipertensi', 'Gastritis', 'Diabetes', 'Penyakit Kulit', 'Diare', 'Gigi & Mulut', 'Penyakit Sendi', 'Konjungtivitis', 'Jantung'],
+                    datasets: [{
+                        label: 'Jumlah Kasus',
+                        data: [3245, 2876, 2154, 1987, 1654, 1432, 1245, 1123, 876, 798],
+                        backgroundColor: 'rgba(0, 119, 182, 0.7)',
+                        borderColor: 'rgba(0, 119, 182, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Visits Chart
+            const visitsCtx = document.getElementById('visitsChart').getContext('2d');
+            const visitsChart = new Chart(visitsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ags', 'Sep', 'Okt', 'Nov', 'Des'],
+                    datasets: [{
+                        label: 'Kunjungan 2023',
+                        data: [1850, 1920, 2150, 2080, 1950, 2250, 2380, 2420, 2150, 2050, 1980, 2100],
+                        borderColor: 'rgba(0, 119, 182, 1)',
+                        backgroundColor: 'rgba(0, 119, 182, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }, {
+                        label: 'Kunjungan 2022',
+                        data: [1750, 1820, 1950, 1880, 1850, 2050, 2180, 2220, 1950, 1850, 1780, 1900],
+                        borderColor: 'rgba(128, 128, 128, 0.7)',
+                        backgroundColor: 'rgba(128, 128, 128, 0.1)',
+                        tension: 0.3,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Programs Chart
+            const programsCtx = document.getElementById('programsChart').getContext('2d');
+            const programsChart = new Chart(programsCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['KIA', 'Imunisasi', 'Gizi', 'P2P', 'Kesling', 'UKS', 'Lansia', 'Keswa'],
+                    datasets: [{
+                        label: 'Capaian (%)',
+                        data: [92, 95, 88, 85, 78, 82, 90, 75],
+                        backgroundColor: 'rgba(0, 119, 182, 0.2)',
+                        borderColor: 'rgba(0, 119, 182, 1)',
+                        pointBackgroundColor: 'rgba(0, 119, 182, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(0, 119, 182, 1)'
+                    }, {
+                        label: 'Target (%)',
+                        data: [90, 90, 90, 90, 90, 90, 90, 90],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        pointBackgroundColor: 'rgba(255, 99, 132, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(255, 99, 132, 1)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    elements: {
+                        line: {
+                            borderWidth: 3
+                        }
+                    }
+                }
+            });
+
+            // Nutrition Chart
+            const nutritionCtx = document.getElementById('nutritionChart').getContext('2d');
+            const nutritionChart = new Chart(nutritionCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Gizi Baik', 'Gizi Kurang', 'Gizi Buruk', 'Gizi Lebih'],
+                    datasets: [{
+                        data: [89.2, 7.1, 1.2, 2.5],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Age Chart
+            const ageCtx = document.getElementById('ageChart').getContext('2d');
+            const ageChart = new Chart(ageCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['0-5 tahun', '6-12 tahun', '13-18 tahun', '19-45 tahun', '46-59 tahun', '60+ tahun'],
+                    datasets: [{
+                        data: [15, 12, 8, 35, 20, 10],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.7)',
+                            'rgba(54, 162, 235, 0.7)',
+                            'rgba(255, 206, 86, 0.7)',
+                            'rgba(75, 192, 192, 0.7)',
+                            'rgba(153, 102, 255, 0.7)',
+                            'rgba(255, 159, 64, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+
+            // Tab Switching
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    // Add active class to clicked button and corresponding pane
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // Filter Button
+            document.getElementById('apply-filter').addEventListener('click', function() {
+                alert('Filter diterapkan. Data akan diperbarui sesuai dengan filter yang dipilih.');
+                // In a real application, this would trigger an AJAX request to get filtered data
+            });
+
+            // Download Report Button
+            document.getElementById('download-report').addEventListener('click', function() {
+                alert('Laporan sedang diunduh. Silakan tunggu...');
+                // In a real application, this would trigger a download process
+            });
+
+            // Print Report Button
+            document.getElementById('print-report').addEventListener('click', function() {
+                window.print();
+            });
+        });
+    </script>
+
+    <style>
+        /* Page Banner Styles */
+        .page-banner {
+            background: linear-gradient(rgba(0, 119, 182, 0.8), rgba(0, 119, 182, 0.8)), url('../images/banner-bg.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 80px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .page-banner h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .breadcrumb li {
+            position: relative;
+        }
+
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 10px;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Reports Section Styles */
+        .reports-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .section-intro h2 {
+            font-size: 32px;
+            color: #0077b6;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-intro h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #0077b6;
+        }
+
+        .section-intro p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* Report Filters Styles */
+        .report-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            align-items: flex-end;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            border-color: #0077b6;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 119, 182, 0.2);
+        }
+
+        .filter-button {
+            background-color: #0077b6;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button:hover {
+            background-color: #005b8a;
+        }
+
+        /* Report Dashboard Styles */
+        .report-dashboard {
+            margin-bottom: 60px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .dashboard-header h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .dashboard-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .action-button i {
+            font-size: 16px;
+        }
+
+        /* Dashboard Cards Styles */
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 119, 182, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card-icon i {
+            font-size: 24px;
+            color: #0077b6;
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+
+        .card-content h4 {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .card-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .card-trend {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .card-trend.positive {
+            color: #28a745;
+        }
+
+        .card-trend.negative {
+            color: #dc3545;
+        }
+
+        .card-trend.neutral {
+            color: #6c757d;
+        }
+
+        /* Charts Section Styles */
+        .charts-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 350px;
+        }
+
+        .chart-container.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .chart-container h4 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Detailed Reports Styles */
+        .detailed-reports {
+            margin-bottom: 60px;
+        }
+
+        .detailed-reports h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .report-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 12px 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .tab-button.active {
+            background-color: #0077b6;
+            color: #fff;
+        }
+
+        .tab-content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .report-description {
+            margin-bottom: 20px;
+        }
+
+        .report-description p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Report Table Styles */
+        .report-table-container {
+            overflow-x: auto;
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .report-table th,
+        .report-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .report-table th {
+            background-color: #f9f9f9;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .report-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .trend-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+        }
+
+        .trend-indicator.positive {
+            color: #28a745;
+        }
+
+        .trend-indicator.negative {
+            color: #dc3545;
+        }
+
+        .trend-indicator.neutral {
+            color: #6c757d;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .status-indicator.excellent {
+            background-color: #28a745;
+        }
+
+        .status-indicator.good {
+            background-color: #17a2b8;
+        }
+
+        .status-indicator.moderate {
+            background-color: #ffc107;
+            color: #333;
+        }
+
+        .status-indicator.poor {
+            background-color: #dc3545;
+        }
+
+        /* Report Downloads Styles */
+        .report-downloads {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .report-downloads h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .report-downloads p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .download-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .download-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .download-option:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+        }
+
+        .download-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 119, 182, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .download-icon i {
+            font-size: 20px;
+            color: #0077b6;
+        }
+
+        .download-info h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .download-info p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .charts-section {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .report-filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .dashboard-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .report-tabs {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+
+            .tab-button {
+                flex: 0 0 auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</body>
+</html>

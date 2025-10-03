@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- 403 Text -->
+  <text x="250" y="150" font-family="Arial, sans-serif" font-size="100" font-weight="bold" text-anchor="middle" fill="#dc3545">403</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="100" r="20" fill="#f8d7da" />
+  <circle cx="350" cy="200" r="30" fill="#f8d7da" />
+  <circle cx="400" cy="80" r="15" fill="#f8d7da" />
+  <circle cx="100" cy="220" r="25" fill="#f8d7da" />
+  
+  <!-- Lock Icon -->
+  <g transform="translate(250, 200) scale(0.8)">
+    <!-- Lock Body -->
+    <rect x="-30" y="-10" width="60" height="50" rx="5" ry="5" fill="#6c757d" />
+    
+    <!-- Lock Shackle -->
+    <path d="M -15,-10 C -15,-30 15,-30 15,-10" fill="none" stroke="#6c757d" stroke-width="10" stroke-linecap="round" />
+    
+    <!-- Keyhole -->
+    <circle cx="0" cy="15" r="8" fill="#f8f9fa" />
+    <line x1="0" y1="15" x2="0" y2="30" stroke="#f8f9fa" stroke-width="4" />
+  </g>
+  
+  <!-- Access Denied Text -->
+  <text x="250" y="270" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#6c757d">Akses Ditolak</text>
+</svg>
